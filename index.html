@@ -1,0 +1,721 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Tamang Kaalaman Ay Kahandaan</title>
+  	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<link rel="stylesheet" href="themes/dmo.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.structure-1.4.2.min.css" />
+	<script src="js/jquery2.1.js"></script>
+	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+			$(':checkbox').each(function() {
+					$(this).prop('checked',localStorage.getItem(this.name) == 'checked');
+				});
+				
+			$('#ready').click(function () {				
+				if ($('input[type="checkbox"][name=checkbox-1]:checked').val() === 'tubig' && ($('input[type="checkbox"][name=checkbox-2]:checked').val() === 'tubig') && ($('input[type="checkbox"][name=checkbox-3]:checked').val() === 'tubig') && ($('input[type="checkbox"][name=checkbox-4]:checked').val() === 'tubig') && ($('input[type="checkbox"][name=checkbox-5]:checked').val() === 'tubig') && ($('input[type="checkbox"][name=checkbox-6]:checked').val() === 'tubig') && ($('input[type="checkbox"][name=checkbox-7]:checked').val() === 'tubig') && ($('input[type="checkbox"][name=checkbox-8]:checked').val() === 'tubig') && ($('input[type="checkbox"][name=checkbox-9]:checked').val() === 'tubig'))
+                		
+					$('#result').text('You Are Ready');
+
+					else 
+					{
+					$('#result').text('You Are Not Ready');
+					}
+
+
+				});
+
+			$('.custom').click(function(){
+				var name = this.name;
+				var value = this.value;
+
+					if($(this).is(':checked')){
+
+					//shorthand to check that localStorage exists
+					localStorage.setItem(this.name,'checked');
+
+
+				} else {
+
+					//shorthand to check that localStorage exists
+					localStorage.removeItem(this.name);
+					}
+					
+								
+
+				
+					});
+
+        });
+    </script>
+	
+	
+
+  <style>
+	
+	body{
+		position:relative;
+		width:100%;
+		height:100%;
+		}
+		
+	p{
+		text-indent:30px;
+		}
+    
+	body{
+		background:#ddd;
+	}
+	
+	.rowContainer{
+		position:relative;
+		width:100%;
+		height:100%;
+		
+	}
+			
+	.row1{
+		width:100%;
+		min-height:100px;
+		
+		text-align:center;
+		
+		background:none;
+	}
+		
+	.row2{
+		width:100%;
+		min-height:200px;
+		background:blue;
+		text-align:center;
+		position:relative;
+		background:none;
+	}
+		
+	.row3{
+		width:100%;
+		min-height:100px;
+		background:green;
+		text-align:center;
+		background:none;
+	}
+		
+	.item{
+		background:yellow;
+		display:inline-block;
+		vertical-align:bottom;
+		background:none;
+	}
+		
+	.col1{
+		float:left;
+	}
+		
+	.col3{
+		float:right;
+	}
+			
+	.col1,.col2,.col3{
+		background:gray;
+		display:inline-block;
+		vertical-align:top;		
+		background:none;	
+	}
+		
+	.col1 .item, .col3 .item {
+				
+	}
+	
+	.mainItem{	
+				
+	}
+		
+@media only screen and (max-width: 1920px) and  (min-width:768px){
+		.rowContainer{
+			position:relative;
+			width:100%;
+			min-height:100%;	
+			vertical-align:top;
+		}
+			
+		.row1{
+			width:100%;
+			min-height:100px;
+			
+			text-align:center;
+		}
+		
+		.row2{
+			width:100%;
+			min-height:550px;
+			display:block;
+			text-align:center;
+			position:relative;
+			margin-top:-70px;
+		}
+		
+		.row3{
+			width:100%;
+			min-height:100px;
+			text-align:center;
+			clear:both;
+		}
+			
+		.row1 .item,.row3 .item{
+			margin: 0px 20px;
+		}
+		
+		.item{
+			min-height:100px;
+			min-width:100px;
+			display:inline-block;
+			vertical-align:bottom;
+			margin:0px;
+			position:relative;
+			
+		}
+		.item img{
+			width:175px;
+		}
+		
+		.col1{
+			float:left;	
+			margin-left:-10px;
+			
+		}
+		
+		.col3{
+			float:right;
+		}
+			
+		.col1,.col2,.col3{
+			min-height:415px;
+			width:200px;
+			display:inline-block;
+			vertical-align:top;
+			
+		}
+		
+		.col1 .item, .col3 .item {
+			margin-top:70px;
+		}
+			
+		.mainItem{
+			min-height:220px;
+			min-width:190px;
+			margin:20px auto;
+			margin-top:90px;
+			
+		}
+		.row1,.row2,.row3{
+			position:relative;
+			
+		}
+}
+		
+@media only screen and (min-width : 320px) and (max-width : 767px)
+		{
+			.row1, .row2, .row3{
+				min-height:50px;
+			}
+			
+			.item{
+				min-width:50px;
+				min-height:50px;
+				margin:5px;
+				
+				
+			}
+			.item img{
+				width:65px;
+				
+			}
+			.row3{
+				
+				clear:both;
+			}
+			.row2{
+			
+			}
+			
+			.row1 .item,.row3 .item{
+				margin: 5px;
+			}
+			
+			.col1,.col2,.col3{
+				min-height:170px;
+				
+				width:80px;
+				display:inline-block;
+				vertical-align:middle;
+				text-align:center;
+				
+			}
+			
+			
+			.col1{
+				float:left;
+				margin-left:-10px;
+			}
+			.col3{
+				float:right;
+			}
+			.col1 .item,.col3 .item{
+				margin-top:20px;
+			}
+			.mainItem {
+				height:140px;
+				width:70px;
+				margin:15px auto;
+				
+				
+			}
+			
+			
+		}
+      #about {
+          background-image: url(images/about.jpg);
+          background-size:cover;
+          color:white;
+      }
+	  
+	        #mainPage {
+
+
+          background-image: url(images/hurricane.png);
+			 background-size:cover;
+      }
+   </style>
+</head>
+<body>
+
+
+    <div data-role="page" id="mainPage">
+      	
+    
+	<div data-role="content">   
+		<div data-position="fixed" style="vertical-align:middle">
+			<center><img src="images/banner.png" style="width:100%;"></center>
+		</div><br/><br />
+    <div class="rowContainer">
+		<div class="row1">
+			<div class="item">
+				<a href="#phone" data-transition="pop" data-rel="dialog"><img src="images/smartphoneicon.png" width="100%" alt=""></a>
+			</div>
+			
+			<div class="item">
+				<a href="#kit" data-transition="pop"><img src="images/kiticon.png" width="100%" alt=""></a>
+			</div>
+		</div>
+		
+		<div class="row2">
+		
+			<div class="col1">
+				<div class="item">
+					<a href="#baha" data-transition="pop"><img src="images/baha.png" width="100%" alt=""></a>
+				</div>
+				
+				<div class="item">
+					<a href="#sunog" data-transition="pop"><img src="images/sunogIcon.png" width="100%" alt=""></a>
+				</div>
+			</div>
+			
+			<div class="col2">
+				<a href="#dapattandaan" data-transition="pop" data-rel="dialog"><div class="mainItem"> <img src="images/tao.png" width="100%"></div></a>
+			</div>
+			
+			<div class="col3">
+				<div class="item">
+					<a href="#lindol" data-transition="pop"><img src="images/lindol.png" width="100%" alt=""></a>
+				</div>
+				
+				<div class="item">
+					<a href="#tsunami" data-transition="pop"><img src="images/tsunamiicon.png" width="100%" alt=""></a>
+				</div>
+			</div>
+		
+		</div>
+		
+		<div class="row3">
+			<a href="#hotline" data-transition="pop"><div class="item"><img src="images/hotlineicon.png" width="100%"></div></a>
+		<a href="#about" data-transition="pop"><div class="item"><img src="images/about.png" width="100%"></div></a>
+		</div>
+	</div>
+	
+			
+
+        </div>
+    </div>
+	
+	<!--dapat tandaan lhuarnz-->
+    <div data-role="page" id="dapattandaan">
+        <div data-role="header" data-position="fixed" >
+
+            <h1>  </h1>
+        </div>
+        <div data-role="content">           
+			<div class="text-center" data-position="fixed" style="vertical-align:middle"><center><img src="images/picmain.png" style="max-width:100%;"></center></div>
+
+				                    <h2>Mga Dapat Tandaan</h2>
+					1. Mahalaga gumawa ng plano sa paghahanda at paglikas sa sakuna.<br /><br />
+					2. Importanteng alam ng bawat miyembro ng pamilya at kasambahay ang plano na ito.<br /><br />
+					3. Alamin kung saan at kung paano ang pagpatay sa supply sa kuryente, gas at tubig.<br /><br />
+					4. Suriin ang bahay at kumpunihin ang mga mahihinang bahagi nito tulad ng mga inaanay na bahagi.<br /><br />
+					5. Maghanda ng <a href="#kit" data-transition="slide"> emergency kit.</a>	<br /><br />
+					6. Alamin ang mga <a href="#hotline" data-transition="slide" data-icon="phone">mahahalagang numero ng telepono</a> na malapit sa inyong lugar - pulis, bumbero, barangay, hopital at iba pa.
+
+
+
+
+
+
+
+</div>
+
+    </div>
+
+	<!--dapat tandaan lhuarnz-->
+	<div data-role="page" id="phone">
+		<div data-role="header" data-position="fixed">
+
+			<h1>  </h1>
+		</div>
+		<div data-role="content">
+
+			<center><h2>Mabuhay!</h2><center>
+			<p>Ang Mobile application na ito ay naglalayong makapagbigay impormasyon sa paghahanda 
+			para sa kaligtasan ng nagbabadyang mga natural na kalamidad. Naglalaman din ito ng mahahalagang 
+			numero ng telepono ng ibat ibang departamento at baranggay na maaring tawagan sa panahon ng sakuna.</p><p>
+			Panatilihin ding updated ang app at huwag kalimutang ilaganap ang impormasyon dahil ang tamang kaalaman ay kahandaan.
+			</p>
+
+
+
+
+
+
+		</div>
+
+	</div>
+
+	<!--baha-->
+    <div data-role="page" id="baha">
+        <div data-role="header" data-position="fixed" data-add-back-btn="false">
+
+          	<div class="text-center" data-position="fixed" style="vertical-align:middle"><center><img src="images/bannerbaha.png" style="max-width:100%;"></center></div>
+   
+        </div>
+        <div data-role="content">           
+                   
+				<fieldset data-theme="h">	
+						<ul>
+							<li>Ilikas ang pamilya, mga mahahalagang gamit, alagang hayop at mga kasambahay sa ligtas na lugar.</li>
+							<li>Kunin na ang mga pananim na maaari ng anihin.</li>
+							<li>Sa mga lugar na bahain, ihanda na ang mga kinakailangang dalhin sa paglikas tulad ng mga mahahalagang dokumento at mga damit. </li>
+							<li>Manatili sa loob ng tahanan at makinig ng ulat panahon sa radyo o telebisyon.</li>
+                            <li>Ingatan ang mga gasera o kandilang may sindi upang makaiwas sa sunog</li>
+                            <li>Kung hindi kinakailangan, huwag lumusong sa tubig baha.</li>
+                            <li>Kung kailangan lumikas, isara ang mga bintana, pintuan at iba pa, patayin ang main switch ng kuryente.</li>
+                            <li>Ilagay sa matataas na lugar ang mga mahahalagang gamit gaya ng applainces.</li>
+                            <li>Iwasan tahakin ang mga daan patungo sa ilog.</li>
+                            <li>Tiyakin walang kable na may kuryente o outlet ng kuryente na nakababad sa tubig.</li>
+                            <li>Ipaalam sa kinauukulan kung may natumbang poste o mga napatid na kable ng kuryente</li>
+                            <li>Itapon ang mga naipong tubig sa mga gulong, lata o paso upang makaiwas sa lamok na may dalang sakit tulad ng dengue at malaria.</li>
+						</ul>
+				</fieldset>						
+
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                   <li><a href="#mainPage" data-transition="pop" data-icon="home">Home</a></li>					
+                    <li><a href="#hotline"  data-transition="pop" data-icon="phone">Emergency Hotline</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	
+	<!--lindol-->
+    <div data-role="page" id="lindol">
+        <div data-role="header" data-position="fixed" data-add-back-btn="false">
+
+         		<div class="text-center" data-position="fixed" style="vertical-align:middle"><center><img src="images/bannerlindol.png" style="max-width:100%;"></center></div>
+      
+        </div>
+        <div data-role="content">           
+				<fieldset data-theme="g">	                        
+						<h3>Kung nasa Loob ng Bahay</h3>
+                        <ul>
+                            <li>Habang lumilindol, huwag agad lumabas ng bahay o gusali.</li>
+                            <li>Tibayan ang pagsasaayos ng mga kasangkapan upang maiwasang mabagsakan ng mga ito kapag lumindol.</li>
+                            <li>Habang lumilindol, pangalagaan ang sarili. Pumunta sa ilalim ng matibay na mesa, sa ilalim ng matibay na hamba ng pintuan
+													o sa isang sulok na malayo sa nalalaglag na bagay. Gamitin ang mga braso upang proteksyunan ang ulo.</li>
+                            <li>Lumayo sa mga gamit at bintanang may salamin. Pagkatapos ng lindol, lumabas ng gusali ng mahinahon. Huwag
+													gumamit ng elevator.</li>
+                        </ul>						
+				</fieldset>
+				<fieldset data-theme="g">	
+						<h3>Kung nasa Labas ng Bahay</h3>
+                        <ul>
+                            <li>Lumayo sa mga poste at istraktura na maaaring bumagsak.</li>
+                            <li>Kung nagmamaneho, ihinto ang sasakyan. Huwag subukan tumawid ng tulay.</li>
+                            <li>Lumayo sa mga gusaling may salamin.</li>
+                            <li>Lumayo sa bahagi ng mga bundok, maaring magkaroon ng paguho ng lupa.</li>
+                            <li>Pagkatapos ng lindol, tignan kung mayroong mga nasaktan at ipaalam kaagad sa rescue o medical team</li>
+                            <li>Huwag magsindi ng sigarilyo dahil baka maygas leak dulot ng lindol.</li>
+                            <li>Huwag munang pumasok sa gusali baka may aftershock pa.</li>
+                            <li>Kung may nasirang linya ng tubig o kuryente, patayin ang main switch at ipaalam agad.</li>
+                        </ul>										
+				</fieldset>
+
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                   <li><a href="#mainPage" data-transition="pop" data-icon="home">Home</a></li>					
+                    <li><a href="#hotline"  data-transition="pop" data-icon="phone">Emergency Hotline</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	
+	<!--tsunami-->
+    <div data-role="page" id="tsunami">
+        <div data-role="header" data-position="fixed"  data-add-back-btn="false">       
+
+         		<div class="text-center" data-position="fixed" style="vertical-align:middle"><center><img src="images/bannertsunami.png" style="max-width:100%;"></center></div>
+     
+        </div>
+        <div data-role="content">      
+					<fieldset data-theme="f">	
+						<h3>Mga Karaniwang Palatandaan ng Pagkakaroon ng Tsunami</h3>
+                        <ul>
+                            <li>Pagkaramdam ng lindol.</li>
+                            <li>Hindi pangkaraniwan at biglaang pagbago ng lebel ng tubig sa Dagat.</li>
+                            <li>Maugong na tunog ng paparating na mga alon mula sa dagat.</li>
+                        </ul>						                    				                     
+				    </fieldset>
+					<fieldset data-theme="f">		
+						<h3>Mga Dapat Paghandaan Para sa Kaligtasan ng Nagbabadyang Tsunami</h3>
+                        <ul>
+                            <li>Kung makakaramdam ng malakas na paglindol at hindi pangkaraniwang kondisyon ng tubig sa dagat,
+														tulad ng mabilis na pagbaba ng lebel ng karagatan magmadaling tumungo sa matataas na lugar.</li>
+                            <li>Huwag nang tumungo sa dagat upang makiusyoso para pagmasdan ang paparating na tsunami, mabuting
+														magmadali nang lumayo sa dagat.</li>
+                            <li>Umiwas sa mga delikadong lugar na maaring abutin ng Tsunami</li>
+                            <li>Maghintay lamang ng pahayag at babala mula sa mga awtoridad hangang maging maayos ang paligid,
+														sapagkat ang tsunami ay hindi lamang binubuo ng iisang alon, ngunit serye ng mabilis, malakas at
+														magkakasunod na malalaking alon.</li>
+                        </ul>
+						                                               						  
+				</fieldset>
+				
+
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                   <li><a href="#mainPage" data-transition="pop" data-icon="home">Home</a></li>					
+                   <li><a href="#hotline"  data-transition="pop" data-icon="phone">Emergency Hotline</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	
+	<!--sunog-->
+    	 <div data-role="page" id="sunog">
+            <div data-role="header" data-position="fixed" data-add-back-btn="false">
+			<div class="text-center" data-position="fixed" style="vertical-align:middle"><center><img src="images/bannersunog.png" style="max-width:100%;"></center></div>
+                <!--<h1>SUNOG</h1>-->
+            </div>
+        <div data-role="content">           
+         
+				<fieldset data-theme="e">	
+						<h3>Mga Paraan Upang Makaiwas sa Sunog</h3>
+                        <ul>
+                            <li>Tanggalin sa saksakan ang mga applainces bago umalis ng bahay</li>
+                            <li>Itago sa ligtas na lugar ang mga bagay na maaring pagsimulan ng apoy tulad ng
+														posporo, lighter at gasolina. Ilayo ang mga ito sa mga bata.</li>
+                            <li>Huwag iwanan ang mga niluluto ng walang bantay.</li>
+                            <li>I - check ang LPG tank sa bahay kung ito ay may singaw.</li>
+                            <li>Huwag mag - iwan ng mga nakasinding kandila at gasera bago matulog o umalis ng bahay.</li>
+                            <li>Iwasan ang "octopus connection" sa outlet at extension cord.</li>
+                            <li>Ipa - check ang mga linya at kawad ng kuryente.</li>
+                            <li>Kung maari, maglagay ng fire extinguisher sa bahay at alamin ang paggamit nito.</li>
+                        </ul>					                        
+						  
+				</fieldset>
+				<fieldset data-theme="e">	
+						<h3>Kapag May Sunog</h3>
+                        <ul>
+                            <li>Huwag subukang patayin ang apoy sa isang silid kung ang usok ay makapal na. Ang usok
+													ay maaring makamatay</li>
+                            <li>Gumapang palabas ng silid upang maiwasang makalanghap ng usok.</li>
+                            <li>Huwag bumalik sa loob ng nasusunog na bahay o gusali. Kung ang damit ay nasusunog, gawin ang  STOP, DROP and ROLL.
+														Gumulong sa lupa upang mamatay ang apoy. Huwag tumakbo dahil lalong lalaki ang apoy.</li>
+                        </ul>
+						
+				</fieldset>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                   <li><a href="#mainPage" data-transition="pop" data-icon="home">Home</a></li>					
+                    <li><a href="#hotline"  data-transition="pop" data-icon="phone">Emergency Hotline</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+	
+	
+    <!-- Kit -->
+    <div data-role="page" id="kit">
+        <div data-role="header" data-position="fixed">    
+            <h1>Emergency Kit</h1>
+        </div>
+        <div data-role="content">            
+				<fieldset data-role="controlgroup" data-theme="c">					
+						<input type="checkbox" name="checkbox-1" id="checkbox-1" class="custom" value="tubig"/>
+							<label for="checkbox-1">Kumot, Malinis na Damit, Kapote, Bota, Tisyu at Sanitari Napkin </label>  
+                        <input type="checkbox" name="checkbox-2" id="checkbox-2" class="custom" value="tubig" />
+							<label for="checkbox-2">Inuming Tubig Sa Malinis at Saradong Lalagyan</label>   
+                        <input type="checkbox" name="checkbox-3" id="checkbox-3" class="custom" value="tubig" />
+							<label for="checkbox-3">Flash, Light, Kandila, Baterya at Posporo</label> 
+                        <input type="checkbox" name="checkbox-4" id="checkbox-4" class="custom" value="tubig" />
+							<label for="checkbox-4">Radio at Baterya</label>   
+                        <input type="checkbox" name="checkbox-5" id="checkbox-5" class="custom" value="tubig" />
+							<label for="checkbox-5">Pagkaing Hindi Masisira sa Loob ng Tatlong Araw Tulad ng mga De lata, at Iba pa</label>  
+                        <input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" value="tubig" />
+							<label for="checkbox-6">Matibay at Malaking Plastic Bag na Paglalagyan ng iba pang mahahalagang bagay </label>
+                        <input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" value="tubig" />
+							<label for="checkbox-7">First Aid Kit: Mga Gamot at Pangunahing Lunas sa Lagnat, Pagdudumi (LBM) at Iba pa</label>
+                        <input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" value="tubig" />
+							<label for="checkbox-8">Mga Kailangang Gamit ng Sanggol, Matatanda at my Kapansanan</label>
+						<input type="checkbox" name="checkbox-9" id="checkbox-9" class="custom" value="tubig" />
+							<label for="checkbox-9">Extrang Pera</label>
+                        
+						   <center>
+                                <img src="images/ready.png" height="40%" width="40%" id="ready" data-role="button"></a>                               
+                            </center>                                   
+                    <h1 id="result"></h1>
+				</fieldset>
+
+
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                   <li><a href="#mainPage" data-transition="pop" data-icon="home">Home</a></li>					
+                    <li><a href="#hotline"  data-transition="pop" data-icon="phone">Emergency Hotline</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contacts -->
+    <div data-role="page" id="hotline">
+        <div data-role="header" data-position="fixed" data-add-back-btn="false" >
+		<div class="text-center" data-position="fixed" style="vertical-align:middle"><center><img src="images/bannerhotline.png" style="max-width:100%;"></center></div>
+
+           <!-- <h1>Emergency Hotline</h1> -->
+        </div>
+			<div data-role="content">   
+            <h2>Mahahalagang Numero ng Telepono sa Olongapo City</h2>
+                <ul data-filter="true">
+                    <li><h3>Barangay Hotline </h3></li>
+                   
+                    <li>Barangay Asinan -  &nbsp&nbsp   <a href="tel:0472235708">223 - 5708</a> </li>
+                    <li>Barangay Banicain - &nbsp&nbsp  <a href="tel:0476110382">611 - 0382</a></li>
+                    <li>Barangay Barretto - &nbsp&nbsp  <a href="tel:0472224295">222 - 4295</a></li>
+                    <li>Barangay East Bajac-Bajac 1 - &nbsp&nbsp    <a href="tel:0472225035">222 - 5035</a></li>
+                    <li>Barangay East Bajac-Bajac 2 - &nbsp&nbsp    <a href="tel:0472235712">223 - 5712</a></li>
+                    <li>Barangay East Tapinac -  &nbsp&nbsp         <a href="tel:0472233444">223 - 3444</a></li>
+                    <li>Barangay Gordon Heights - &nbsp&nbsp        <a href="tel:0472235497">223 - 5497</a></li>
+                    <li>Barangay Kalaklan -  &nbsp&nbsp <a href="tel:0472246983">224 - 6983</a></li>
+                    <li>Barangay Mabayuan -  &nbsp&nbsp <a href="tel:0472245179">224 - 5179</a></li>
+                    <li>Barangay New Cabalan -&nbsp&nbsp<a href="tel:0472245414"> 224 - 5414</a></li>
+                    <li>Barangay New Ilalim - &nbsp&nbsp<a href="tel:0472239772"> 223 - 9772</a></li>
+                    <li>Barangay New Kababae -&nbsp&nbsp<a href="tel:0472228326"> 222 - 8326</a></li>
+                    <li>Barangay Old Cabalan -&nbsp&nbsp<a href="tel:0472231629"> 223 - 1629</a></li>
+                    <li>Barangay Pag-Asa -  &nbsp&nbsp  <a href="tel:0472228037">222 - 8037</a></li>
+                    <li>Barangay Sta. Rita -  &nbsp&nbsp<a href="tel:0472229225"> 222 - 9225</a></li>
+                    <li>Barangay West Bajac-Bajac 1 -  &nbsp&nbsp   <a href="tel:0472225137"> 222 - 5137</a></li>
+                    <li>Barangay West Bajac-Bajac 2 -  &nbsp&nbsp   <a href="tel:0472242768"> 224 - 2768</a></li>
+                    <li>Barangay West Tapinac - &nbsp&nbsp          <a href="tel:0472233434">223 - 3434</a></li>
+                    <li><h3>Disaster Risk Reduction Office</h3> SMART - &nbsp&nbsp <a href="tel:09985267121">0998 526 7121</a><br />GLOBE - &nbsp&nbsp 
+                                                        <a href="tel:09173065966">0917 306 5966</a><br />LANDLINE - &nbsp&nbsp 
+                                                        <a href="tel:0476021241">602 1241</a> </li>
+                    <li><h3>CSWD </h3>&nbsp&nbsp 	<a href="tel:0472229491">222 - 9491</a></li>
+					<li><h3>OTMPS </h3> &nbsp&nbsp      <a href="tel:0472245297">224 - 5297</a> </li>
+                    <li><h3>Police Hotline </h3></li>
+                    <li>Police Station 1 - &nbsp&nbsp <a href="tel:0472223925">222 - 3925</a> </li>
+                    <li>Police Station 2 - &nbsp&nbsp <a href="tel:0472221120">222 - 1120</a> </li>
+                    <li>Police Station 3 - &nbsp&nbsp <a href="tel:0472224554">222 - 4554</a> </li>
+                    <li>Police Station 4 - &nbsp&nbsp <a href="tel:0472248298">224 - 8298</a> </li>
+                    <li>Police Station 5 - &nbsp&nbsp <a href="tel:0472238134">223 - 8134</a> </li>
+                    <li>Police Station 6 - &nbsp&nbsp <a href="tel:0472248511">224 - 8511</a> </li>
+					<li>Red Cross - &nbsp&nbsp <a href="tel:0472222181">222 - 2181</a> </li>
+                </ul>
+            
+			</div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+					 <li><a href="#mainPage" data-transition="pop" data-icon="home">Home</a></li>	
+                    <li><a href="#kit" data-transition="pop" data-icon="gear">Emergency Kit</a></li>					
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div data-role="page" id="about">
+        <div data-role="header" data-position="fixed" data-add-back-btn="false">
+            
+
+            <h1>About</h1>
+        </div>
+        <div data-role="content">
+        
+             <center><h2>Created By : <br />Team 404 Developers Guild</h2>
+             <img src="images/404.png" style="width:40%;">
+             <h3>Ernest Aljon Jose</h3>
+			 <h3>Niño Del Rosario</h3>
+             
+             <h3>Paul Albert Horfila</h3>
+             <h3>Auriel Gimeno</h3>
+
+                         <h2>In Association With:</h2>
+             <img src="images/dmo.png" style="width:40%;">
+                <img src="images/download.png" style="width:40%;"><br/>
+			<h4>App version. 2.1</h4>
+		<h4>Support:<br/>404DevelopersGuild@gmail.com</h4>
+                </center>
+
+
+            
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#mainPage" data-transition="pop" data-icon="home">Home</a></li>
+                    <li><a href="#kit" data-transition="pop" data-icon="gear">Emergency Kit</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

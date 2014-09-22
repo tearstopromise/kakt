@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<widget id="com.supernest.tamangkaalamanaykahandaan" version="1.0.0.0" xmlns="http://w3.org/ns/widgets" xmlns:rim="http://www.blackberry.com/ns/widgets">
+
+<name>Tamang Kaalaman Ay Kahandaan</name>
+<author>404 Developers Guild</author>
+ <description>
+            Tamang kaalaman ay kahandaan
+        </description>
+
+<icon src="images/icon.png"/>
+<content src="splash.html" />
+
+<feature id="blackberry.ui.dialog"/>
+
+<feature id="blackberry.app">
+<param name="orientation" value="portrait" />
+</feature>
+
+</widget>
